@@ -39,6 +39,7 @@ def null_handlers(df):
     ''' This function handles null values in zillow data by dropping all null values
     as 99.41% of data sre retianed even after dropping all rows containing nulls'''
     df=df.dropna()
+    df= df.drop(columns=['Unnamed: 0'])
     return df
 
 def optimize_types(df):
